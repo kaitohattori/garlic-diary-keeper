@@ -1,5 +1,5 @@
 from model.diary import Diary
-from model.tweet.tweet_content import TweetContent
+from infrastructure.model.tweet.tweet_content import TweetContent
 from infrastructure.tweeter import Tweeter
 
 class DiaryKeeper(object):

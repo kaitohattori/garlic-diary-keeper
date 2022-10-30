@@ -1,6 +1,6 @@
 import tweepy
 
-from model.tweet.tweet_content import TweetContent
+from infrastructure.model.tweet.tweet_content import TweetContent
 from settings import settings
 
 class Tweeter(object):

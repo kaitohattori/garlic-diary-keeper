@@ -1,6 +1,6 @@
 from model.diary import Diary
 from model.photo.photo import Photo
-from model.tweet.tweet_text import TweetText
+from infrastructure.model.tweet.tweet_text import TweetText
 
 
 class TweetContent(object):
