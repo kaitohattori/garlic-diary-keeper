@@ -3,7 +3,7 @@ from time import sleep
 
 import cv2
 
-from error import CameraCaptureException
+from exception.exceptions import CameraCaptureException
 from model.photo.photo import Photo
 from settings import settings
 

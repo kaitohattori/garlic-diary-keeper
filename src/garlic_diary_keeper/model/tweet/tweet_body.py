@@ -1,4 +1,4 @@
-from error import TweetBodyLengthException
+from exception.exceptions import TweetBodyLengthException
 from model.garlic.garlic import Garlic
 from settings import settings
 

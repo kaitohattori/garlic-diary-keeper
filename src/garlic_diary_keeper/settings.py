@@ -1,7 +1,7 @@
 from datetime import datetime
 import os
 
-from error import SettingsLoadEnvironmentVariableException
+from exception.exceptions import SettingsLoadEnvironmentVariableException
 
 class Settings(object):
     def __init__(self):
