@@ -17,6 +17,6 @@ class Tweeter(object):
         api = self.authenticate()
         # Tweet text with image
         api.update_status_with_media(
-            status = content.body.text, 
-            filename = content.photo.path
+            status = content.text.value,
+            filename = content.photo.path,
         )
