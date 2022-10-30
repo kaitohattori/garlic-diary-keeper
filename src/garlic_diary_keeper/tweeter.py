@@ -13,7 +13,9 @@ class Tweeter(object):
         return tweepy.API(auth)
 
     def tweet(self, content: TweetContent):
+        # Authenticate the twitter API
         api = self.authenticate()
+        # Tweet text with image
         api.update_status_with_media(
             status = content.body.text, 
             filename = content.photo.path
