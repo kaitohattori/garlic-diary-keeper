@@ -8,8 +8,8 @@ class Tweeter(object):
         self.api = None
 
     def authenticate(self) -> tweepy.API:
-        auth = tweepy.OAuthHandler(settings.api_key, settings.api_key_secret)
-        auth.set_access_token(settings.access_token, settings.access_token_secret)
+        auth = tweepy.OAuthHandler(settings.twitter_api_key, settings.twitter_api_key_secret)
+        auth.set_access_token(settings.twitter_access_token, settings.twitter_access_token_secret)
         return tweepy.API(auth)
 
     def tweet(self, content: TweetContent):
