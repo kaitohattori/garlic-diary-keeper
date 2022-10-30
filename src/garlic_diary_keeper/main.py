@@ -7,7 +7,7 @@ def main():
     try:
         # 写真を撮る
         camera = Camera()
-        photo = camera.capture()
+        photo = camera.take()
 
         # ツイート本文を作成する
         generator = TweetBodyGenerator()

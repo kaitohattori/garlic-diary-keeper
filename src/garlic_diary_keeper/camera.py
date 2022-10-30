@@ -9,18 +9,22 @@ from settings import settings
 
 class Camera:
     def activate(self):
+        # Initialize video capture
         video_capture = cv2.VideoCapture(0)
-        # wait 3 seconds for preparing VideoCapture
+        # Wait 3 seconds for preparing video capture
         sleep(3)
         return video_capture
 
-    def capture(self) -> Photo:
+    def take(self) -> Photo:
+        # Acitivate the camera
         video_capture = self.activate()
 
+        # Get the current frame from video capture
         result, frame = video_capture.read()
         if result is False:
             raise CameraCaptureException
 
+        # Save the frame to path
         Camera.save_image(settings.captured_image_path, frame)
 
         return Photo(settings.captured_image_path)
