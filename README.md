@@ -43,7 +43,7 @@ $ make run
 
 ## 開発
 
-### lint
+### linter
 
 ```
 $ flake8 ./
