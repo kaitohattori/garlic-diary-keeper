@@ -10,7 +10,7 @@ Twitter：https://twitter.com/garlic_diary
 
 以下の環境変数をすべてセットする。
 
-https://docs.google.com/document/d/18vC2pyuCw_srKAKiEbNMrlvyWINouokWnNn_VD8uyq8/view
+https://drive.google.com/file/d/18vC2pyuCw_srKAKiEbNMrlvyWINouokWnNn_VD8uyq8/view
 
 |KEY|VALUE|
 |---|---|
