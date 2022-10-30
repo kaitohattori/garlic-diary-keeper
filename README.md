@@ -10,14 +10,14 @@ Twitter：https://twitter.com/garlic_diary
 
 以下の環境変数をすべてセットする。
 
-https://drive.google.com/file/d/1r-ZddNKMy2QICH6lulFIyOdFvcNrqIwV/view
+https://docs.google.com/document/d/18vC2pyuCw_srKAKiEbNMrlvyWINouokWnNn_VD8uyq8/view
 
 |KEY|VALUE|
 |---|---|
-|API_KEY| API キー |
-|API_KEY_SECRET| API シークレット|
-|ACCESS_TOKEN| アクセストークン |
-|ACCESS_TOKEN_SECRET| アクセストークンシークレット |
+|TWITTER_API_KEY| API キー |
+|TWITTER_API_KEY_SECRET| API シークレット|
+|TWITTER_ACCESS_TOKEN| アクセストークン |
+|TWITTER_ACCESS_TOKEN_SECRET| アクセストークンシークレット |
 
 ### 環境構築
 
