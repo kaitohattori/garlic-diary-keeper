@@ -3,13 +3,20 @@ import tweepy
 from infrastructure.model.tweet.tweet_content import TweetContent
 from settings import settings
 
+
 class Tweeter(object):
     def __init__(self):
         self.api = None
 
     def authenticate(self) -> tweepy.API:
-        auth = tweepy.OAuthHandler(settings.twitter_api_key, settings.twitter_api_key_secret)
-        auth.set_access_token(settings.twitter_access_token, settings.twitter_access_token_secret)
+        auth = tweepy.OAuthHandler(
+            settings.twitter_api_key,
+            settings.twitter_api_key_secret
+        )
+        auth.set_access_token(
+            settings.twitter_access_token,
+            settings.twitter_access_token_secret
+        )
         return tweepy.API(auth)
 
     def tweet(self, content: TweetContent):
@@ -17,6 +24,6 @@ class Tweeter(object):
         api = self.authenticate()
         # Tweet text with image
         api.update_status_with_media(
-            status = content.text.value,
-            filename = content.photo.path,
+            status=content.text.value,
+            filename=content.photo.path,
         )

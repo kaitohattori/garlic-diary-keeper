@@ -1,6 +1,6 @@
 # garlic-diary-keeper
 
-にんにく日記をTwitterに呟くBot
+にんにく日記を Twitter に呟く Bot
 
 Twitter：https://twitter.com/garlic_diary
 
@@ -15,6 +15,8 @@ Twitter：https://twitter.com/garlic_diary
 
 ```
 $ pip install -r requirements.txt
+or
+$ make install-dependencies
 ```
 
 ### 環境変数
@@ -35,4 +37,16 @@ Key 一覧：https://drive.google.com/file/d/18vC2pyuCw_srKAKiEbNMrlvyWINouokWnN
 
 ```
 $ python src/garlic_diary_keeper/main.py
+or
+$ make run
+```
+
+## 開発
+
+### linter
+
+```
+$ flake8 ./
+or
+$ make lint
 ```
