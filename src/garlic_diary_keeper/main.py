@@ -1,27 +1,26 @@
 from camera import Camera
+from model.garlic.garlic_factory import GarlicFactory
+from model.tweet.tweet_body import TweetBody
 from model.tweet.tweet_content import TweetContent
-from tweet_body_generator import TweetBodyGenerator
 from tweeter import Tweeter
 
 def main():
-    try:
-        # 写真を撮る
-        camera = Camera()
-        photo = camera.take()
+    # 写真を撮る
+    camera = Camera()
+    photo = camera.take()
 
-        # ツイート本文を作成する
-        generator = TweetBodyGenerator()
-        tweet_body = generator.generate()
+    # にんにく
+    garlic = GarlicFactory.build()
 
-        # ツイート内容を作成する
-        tweet_content = TweetContent(tweet_body, photo)
+    # ツイート本文を作成する
+    tweet_body = TweetBody.of(garlic)
 
-        # ツイートする
-        tweeter = Tweeter()
-        tweeter.tweet(tweet_content)
+    # ツイート内容を作成する
+    tweet_content = TweetContent(tweet_body, photo)
 
-    except Exception as e:
-        print(e)
+    # ツイートする
+    tweeter = Tweeter()
+    tweeter.tweet(tweet_content)
 
 if __name__ == "__main__":
     main()

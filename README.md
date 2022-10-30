@@ -21,7 +21,7 @@ $ pip install -r requirements.txt
 
 以下の環境変数をすべてセットする。
 
-https://drive.google.com/file/d/18vC2pyuCw_srKAKiEbNMrlvyWINouokWnNn_VD8uyq8/view
+Key 一覧：https://drive.google.com/file/d/18vC2pyuCw_srKAKiEbNMrlvyWINouokWnNn_VD8uyq8/view
 
 |KEY|VALUE|
 |---|---|
@@ -29,6 +29,7 @@ https://drive.google.com/file/d/18vC2pyuCw_srKAKiEbNMrlvyWINouokWnNn_VD8uyq8/vie
 |TWITTER_API_KEY_SECRET| Twitter API シークレット|
 |TWITTER_ACCESS_TOKEN| Twitter アクセストークン |
 |TWITTER_ACCESS_TOKEN_SECRET| Twitter アクセストークンシークレット |
+|GROWTH_START_DATE| 栽培開始日 |
 
 ## 実行
 
