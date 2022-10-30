@@ -7,6 +7,7 @@ from exception.exceptions import CameraCaptureException
 from model.photo.photo import Photo
 from settings import settings
 
+
 class Camera:
     def activate(self):
         # Initialize video capture
@@ -27,6 +28,9 @@ class Camera:
         # Save the frame to path
         Camera.save_image(settings.captured_image_path, frame)
 
+        return Photo(settings.captured_image_path)
+
+    def load_from_local(self) -> Photo:
         return Photo(settings.captured_image_path)
 
     @staticmethod

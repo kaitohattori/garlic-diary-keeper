@@ -1,2 +1,3 @@
+flake8 == 5.0.4
 opencv-python == 4.6.0.66
 tweepy == 4.12.0

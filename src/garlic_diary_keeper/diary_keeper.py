@@ -2,6 +2,7 @@ from model.diary import Diary
 from infrastructure.model.tweet.tweet_content import TweetContent
 from infrastructure.tweeter import Tweeter
 
+
 class DiaryKeeper(object):
     def keep(self, diary: Diary):
         # Twitterに日記を投稿する

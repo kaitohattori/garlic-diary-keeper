@@ -4,10 +4,12 @@ from model.diary import Diary
 from model.garlic.garlic_factory import GarlicFactory
 from diary_keeper import DiaryKeeper
 
+
 def main():
     # 写真を撮る
     camera = Camera()
-    photo = camera.take()
+    # photo = camera.take()
+    photo = camera.load_from_local()
 
     # にんにく
     garlic = GarlicFactory.build()
@@ -19,6 +21,7 @@ def main():
     # 日記をつける
     diary_keeper = DiaryKeeper()
     diary_keeper.keep(diary)
+
 
 if __name__ == "__main__":
     main()
