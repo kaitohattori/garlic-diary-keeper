@@ -1,5 +1,7 @@
 # garlic-diary-keeper
 
+![Icon](image/icon.png)
+
 にんにく日記を Twitter に呟く Bot
 
 Twitter：https://twitter.com/garlic_diary
@@ -32,6 +34,21 @@ Key 一覧：https://drive.google.com/file/d/18vC2pyuCw_srKAKiEbNMrlvyWINouokWnN
 |TWITTER_ACCESS_TOKEN| Twitter アクセストークン ||
 |TWITTER_ACCESS_TOKEN_SECRET| Twitter アクセストークンシークレット ||
 |GROWTH_START_DATE| 栽培開始日 | フォーマットは yyyy-mm-dd |
+
+
+### ラズパイ環境構築
+
+```
+$ sudo apt updade
+$ sudo apt install git
+$ sudo apt install libatlas3-base
+$ sudo apt install libgl1-mesa-dev
+
+$ git clone https://github.com/kaitohattori/garlic-diary-keeper.git
+
+$ crontab -e
+0 15 * * * python /app/garlic-diary-keeper/src/garlic_diary_keeper/main.py > /tmp/apps/garlic_diary_keeper/log.txt
+```
 
 ## 実行
 
