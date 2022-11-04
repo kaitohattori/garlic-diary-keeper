@@ -8,8 +8,8 @@ from diary_keeper import DiaryKeeper
 def main():
     # 写真を撮る
     camera = Camera()
-    # photo = camera.take()
-    photo = camera.load_from_local()
+    photo = camera.take()
+    # photo = camera.load_from_local()
 
     # にんにく
     garlic = GarlicFactory.build()
