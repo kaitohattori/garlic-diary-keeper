@@ -7,5 +7,17 @@ class DiaryText(object):
         self.value = text
 
     @classmethod
-    def fromTemplateWithGarlic(cls, garlic: Garlic):
-        return cls(settings.diary_text_format.format(garlic.elapsed_days()))
+    def fromTemplate(cls, text: str, garlic: Garlic):
+        templated_text = settings.diary_text_format.format(
+            garlic.elapsed_days(),
+            text
+        )
+        return cls(DiaryText.sliceEndOfReadingPoint(templated_text, 140))
+
+    @staticmethod
+    def sliceEndOfReadingPoint(text: str, max_length: int):
+        try:
+            index = text[:max_length].rindex('。')
+            return text[:index+1]
+        except:
+            return text[:max_length]

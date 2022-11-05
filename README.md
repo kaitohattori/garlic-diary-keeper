@@ -33,6 +33,7 @@ Key 一覧：https://drive.google.com/file/d/18vC2pyuCw_srKAKiEbNMrlvyWINouokWnN
 |TWITTER_API_KEY_SECRET| Twitter API シークレット||
 |TWITTER_ACCESS_TOKEN| Twitter アクセストークン ||
 |TWITTER_ACCESS_TOKEN_SECRET| Twitter アクセストークンシークレット ||
+|OPENAI_API_KEY| OpenAI API キー | https://beta.openai.com/overview |
 |GROWTH_START_DATE| 栽培開始日 | フォーマットは yyyy-mm-dd |
 
 

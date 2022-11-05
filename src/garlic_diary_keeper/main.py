@@ -1,3 +1,4 @@
+from ai_text_generator import AITextGenerator
 from camera import Camera
 from model.diary_text import DiaryText
 from model.diary import Diary
@@ -15,7 +16,11 @@ def main():
     garlic = GarlicFactory.build()
 
     # 日記
-    diary_text = DiaryText.fromTemplateWithGarlic(garlic)
+    generator = AITextGenerator()
+    generated_text = generator.generate()
+    print(generated_text)
+
+    diary_text = DiaryText.fromTemplate(generated_text, garlic)
     diary = Diary(diary_text, photo)
 
     # 日記をつける
