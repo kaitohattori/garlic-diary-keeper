@@ -36,7 +36,6 @@ Key 一覧：https://drive.google.com/file/d/18vC2pyuCw_srKAKiEbNMrlvyWINouokWnN
 |OPENAI_API_KEY| OpenAI API キー | https://beta.openai.com/overview |
 |GROWTH_START_DATE| 栽培開始日 | フォーマットは yyyy-mm-dd |
 
-
 ### ラズパイ環境構築
 
 ```
