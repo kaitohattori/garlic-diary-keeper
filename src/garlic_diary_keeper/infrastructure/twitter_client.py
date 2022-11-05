@@ -4,11 +4,8 @@ from infrastructure.model.tweet.tweet_content import TweetContent
 from settings import settings
 
 
-class Tweeter(object):
+class TwitterClient(object):
     def __init__(self):
-        self.api = None
-
-    def authenticate(self) -> tweepy.API:
         auth = tweepy.OAuthHandler(
             settings.twitter_api_key,
             settings.twitter_api_key_secret
@@ -17,13 +14,17 @@ class Tweeter(object):
             settings.twitter_access_token,
             settings.twitter_access_token_secret
         )
-        return tweepy.API(auth)
+        self.api = tweepy.API(auth)
 
-    def tweet(self, content: TweetContent):
-        # Authenticate the twitter API
-        api = self.authenticate()
+    def post_tweet(self, content: TweetContent):
         # Tweet text with image
-        api.update_status_with_media(
+        self.api.update_status_with_media(
             status=content.text.value,
             filename=content.photo.path,
         )
+
+    def get_trend_topic(self):
+        trends = self.api.get_place_trends(id = settings.twitter_woeid)
+        first_trend_topic = trends[0]['trends'][0]['name']
+        hash_ignored_first_trend_topic = first_trend_topic if first_trend_topic[:1] != '#' else first_trend_topic[1:]
+        return hash_ignored_first_trend_topic

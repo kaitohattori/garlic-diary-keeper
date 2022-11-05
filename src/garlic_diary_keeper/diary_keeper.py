@@ -1,9 +1,12 @@
 from model.diary import Diary
 from infrastructure.model.tweet.tweet_content import TweetContent
-from infrastructure.tweeter import Tweeter
+from infrastructure.twitter_client import TwitterClient
 
 
 class DiaryKeeper(object):
+    def __init__(self):
+        self.twitter_client = TwitterClient()
+
     def keep(self, diary: Diary):
         # Twitterに日記を投稿する
         self.post_tweet(diary)
@@ -13,5 +16,4 @@ class DiaryKeeper(object):
         tweet_content = TweetContent.fromDiary(diary)
 
         # ツイートする
-        tweeter = Tweeter()
-        tweeter.tweet(tweet_content)
+        self.twitter_client.post_tweet(tweet_content)
