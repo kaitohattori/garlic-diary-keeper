@@ -10,4 +10,7 @@ class TweetContent(object):
 
     @classmethod
     def fromDiary(cls, diary: Diary):
-        return cls(diary.text, diary.photo)
+        return cls(
+            TweetText(diary.text.value, diary.tag.value),
+            diary.photo
+        )
